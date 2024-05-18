@@ -1,0 +1,26 @@
+cd C:\Program Files (x86)\MySQL\MySQL Server 5.5\bin
+netstat -aon|findstr 3306
+sc delete MySQL
+mysqld --install
+mysql -u root -p
+******
+create database webserver;
+use webserver;
+
+create table user(	username varchar(10),
+		password varchar(10),
+		id int);
+
+insert into user values('Tom','123456','1');
+insert into user values('Sam','qweasd',2);
+select * from user;
+
+
+
++----------+----------+
+| username | password |
++----------+----------+
+| Tom      | 123456   |
+| Sam      | qweasd   |
+| JIM      | qweasd   |
++----------+----------+
